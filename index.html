@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lista de Tarefas</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section>
+      <article class="card bg-primary text-white" id="navegacao">
+        <form>
+          <div class="card-header">
+            Tarefa
+          </div>
+          <div class="card-body">
+            <input class="input" type="text" id="tarefa">
+            <button class="btn btn-sm btn-light" id="botao" type="button"onclick="inserirTarefa()">
+              <img src="https://img.icons8.com/wired/32/000000/plus-2-math.png"/>
+            </button>
+          </div>
+        </form>
+      </article>
+      <article class="card border-primary text-primary" id="painel">
+        <div class="card-header">
+          Tarefas
+        </div>
+        <div class="card-body">
+          <p id="inserir" onchange="visibilidade()"></p>
+        </div>
+      </article>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
