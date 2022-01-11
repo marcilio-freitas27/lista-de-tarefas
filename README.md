@@ -9,3 +9,7 @@
 - HTML5
 - CSS3
 - Boostrap 5
+
+## Pages
+
+- Acesse a aplicação aqui:  [lista-detarefas](https://marcilio-freitas27.github.io/lista-de-tarefas/)
