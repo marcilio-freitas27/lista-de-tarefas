@@ -25,7 +25,14 @@
   height: 32px;
 }
 
-#button{
+/* #button{
+  width: 32px;
+  height: 32px;
+  background: url("https://img.icons8.com/wired/32/000000/delete.png");
+  background-repeat: "no-repeat";
+} */
+
+.button{
   width: 32px;
   height: 32px;
   background: url("https://img.icons8.com/wired/32/000000/delete.png");

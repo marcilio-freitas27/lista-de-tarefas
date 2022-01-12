@@ -1,76 +1,54 @@
-
+//criar novo elemento, seus atributos e inserir na lista de tarefas
 const inserirTarefa = () =>{
   const inserir = document.getElementById('inserir')
-  const button = document.createElement('button')
-  const classe = document.createAttribute('class')
-  const buttonType = document.createAttribute('type')
-  const buttonId = document.createAttribute('id')
-  const buttonOnclick = document.createAttribute('onclick')
-  // const para = document.getElementById('para')
-  classe.value = "btn btn-light"
-  buttonType.value = "button"
-  buttonId.value = "button"
-  buttonOnclick.value = "excluir()"
-  // buttonStyle = "background: url(https://img.icons8.com/wired/16/000000/deconste.png)"
-  button.setAttributeNode(classe)
-  button.setAttributeNode(buttonId)
-  button.setAttributeNode(buttonType)
-  button.setAttributeNode(buttonOnclick)
-// button.setAttributeNode(buttonStyle);
   const tarefa =  document.getElementById('tarefa')
-  //criar um elemento
+  //criar elemento
+  const div = document.createElement('div')
+  const button = document.createElement('button')
   const input = document.createElement('input')
   const label = document.createElement('label')
   const barra = document.createElement('br')
-  //inserir um valor no atributo
+  //criar atributo
+  const classe = document.createAttribute('class')
+  const buttonType = document.createAttribute('type')
+  const buttonOnclick = document.createAttribute('onclick')
   const type = document.createAttribute('type')
-  const id = document.createAttribute('id')
   const checkOnclick = document.createAttribute('onclick')
-  const idPara = document.createAttribute('id')
-  //atribuir valores ao atributo
+  //definir valores dos atributos
+  div.className = 'divisao'
+  button.className = "button"
+  classe.value = `btn btn-light ${button.className}`
+  buttonType.value = "button"
+  buttonOnclick.value = "excluir()"
   type.value = 'checkbox'
-  id.value = 'check'
+  label.className = 'para'
+  input.className = 'check'
   checkOnclick.value = 'visibilidade()'
-  idPara.value = 'para'
-  // alterar o valor do atributo
+  //setar o atrubuto inserindo o valor no elemento
+  button.setAttributeNode(classe)
+  button.setAttributeNode(buttonType)
+  button.setAttributeNode(buttonOnclick)
   input.setAttributeNode(type);
-  input.setAttributeNode(id);
   input.setAttributeNode(checkOnclick)
-  label.setAttributeNode(idPara);
-  // para.style.textDecoration = 'none'
-  //adicionar o elemento ao documento
-  inserir.appendChild(input)
-  // inserir.innerHTML += `${tarefa.value}`
-  inserir.appendChild(label)
+  // adicionar o elemento filho ao elemento pai
+  div.appendChild(input)
+  div.appendChild(label)
   label.innerHTML = `${tarefa.value}`
-  inserir.appendChild(button)
-  // limpar input
+  div.appendChild(button)
   tarefa.value = ''
-  inserir.appendChild(barra)
-  // button.innerHTML = `<button class="btn btn-small btn-light" type="button" id="button" onclick="excluir()"><img src="https://img.icons8.com/wired/16/000000/deconste.png"/></button>`
-  
+  div.appendChild(barra)
+  inserir.appendChild(div)
 }
 
+// marcar um item como concluido inserir um tachado no texto: em andamento
 const visibilidade = () => {
-  // const check = document.querySelector('#check')
-  const para = document.getElementById('para')
-  // if(check.checked){
+  const para = document.querySelector('.para')
   para.style.textDecoration = 'line-through'
-  // }
 }
 
+// excluir um item da lista: funcional, porém com erro na ordem de exclusão
 const excluir = () =>{
-  const collection = document.querySelector('#button')
-  const checkDois = document.querySelector('#check')
-  const para = document.querySelector('#para')
-  const barra = document.querySelector('br')
-  // const inputDois = document.querySelector('input')
-  collection.remove()
-  checkDois.remove()
-  para.remove()
-  barra.remove()
-  // if(inputDois.id !== 'tarefa'){
-  //   inputDois.value.remove()
-  // }
+  const divisao = document.getElementsByClassName('divisao')
+  divisao[0].remove()
   
 }
