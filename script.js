@@ -13,30 +13,27 @@ const inserirTarefa = () =>{
   //criar atributo
   const classe = document.createAttribute('class')
   const buttonType = document.createAttribute('type')
-  // const buttonOnclick = document.createAttribute('onclick')
   const type = document.createAttribute('type')
-  // const checkOnclick = document.createAttribute('onclick')
-  //definir valores dos atributos
+  // define um valor para a classe
   div.className = 'divisao'
   button.className = "button"
-  classe.value = `btn btn-light ${button.className}`
-  buttonType.value = "button"
-  // buttonOnclick.value = "excluir()"
-  type.value = 'checkbox'
   label.className = 'para'
   input.className = 'check'
-  // checkOnclick.value = 'visibilidade()'
+  //definir valores dos atributos
+  classe.value = `btn btn-light ${button.className}`
+  buttonType.value = "button"
+  type.value = 'checkbox'
   //setar o atrubuto inserindo o valor no elemento
   button.setAttributeNode(classe)
   button.setAttributeNode(buttonType)
-  // button.setAttributeNode(buttonOnclick)
   input.setAttributeNode(type);
-  // input.setAttributeNode(checkOnclick)
   // adicionar o elemento filho ao elemento pai
   div.appendChild(input)
   div.appendChild(label)
+  // inserir o valor do imput no elemtento(label)
   label.innerHTML = `${tarefa.value}`
   div.appendChild(button)
+  //inserido o elemento, o input fica sem texto
   tarefa.value = ''
   div.appendChild(barra)
   inserir.appendChild(div)
@@ -60,7 +57,3 @@ const inserirTarefa = () =>{
   }
 
 }
-
-
-
-
