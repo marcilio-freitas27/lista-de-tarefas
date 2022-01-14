@@ -13,25 +13,25 @@ const inserirTarefa = () =>{
   //criar atributo
   const classe = document.createAttribute('class')
   const buttonType = document.createAttribute('type')
-  const buttonOnclick = document.createAttribute('onclick')
+  // const buttonOnclick = document.createAttribute('onclick')
   const type = document.createAttribute('type')
-  const checkOnclick = document.createAttribute('onclick')
+  // const checkOnclick = document.createAttribute('onclick')
   //definir valores dos atributos
   div.className = 'divisao'
   button.className = "button"
   classe.value = `btn btn-light ${button.className}`
   buttonType.value = "button"
-  buttonOnclick.value = "excluir()"
+  // buttonOnclick.value = "excluir()"
   type.value = 'checkbox'
   label.className = 'para'
   input.className = 'check'
-  checkOnclick.value = 'visibilidade()'
+  // checkOnclick.value = 'visibilidade()'
   //setar o atrubuto inserindo o valor no elemento
   button.setAttributeNode(classe)
   button.setAttributeNode(buttonType)
-  button.setAttributeNode(buttonOnclick)
+  // button.setAttributeNode(buttonOnclick)
   input.setAttributeNode(type);
-  input.setAttributeNode(checkOnclick)
+  // input.setAttributeNode(checkOnclick)
   // adicionar o elemento filho ao elemento pai
   div.appendChild(input)
   div.appendChild(label)
@@ -41,31 +41,26 @@ const inserirTarefa = () =>{
   div.appendChild(barra)
   inserir.appendChild(div)
 
-}
-
-// marcar um item como concluido inserir um tachado no texto: em andamento
-
-// const visibilidade = () =>{
-//   const visivel = document.getElementsByClassName("para");
-//   for (let i = 0; i < close.length; i++) {
-//     visivel[i].onclick = (event) => { 
-//       const para = event.target.parentElement;
-//       para.style.textDecoration = 'line-through'
-//     }
-//   }
-// }
-
-const visibilidade = ()=>{
-  const para = document.getElementsByClassName('para')
-  para[0].style.textDecoration = 'line-through'
-}
-
-const excluir = () =>{
-  const close = document.getElementsByClassName("divisao");
+  //collection = semelhante a uma array, mas só é possível itera-lo. Não da pra usar funções built-in para array
+  const close = document.getElementsByClassName("button")
   for (let i = 0; i < close.length; i++) {
     close[i].onclick = (event) => { 
-      const remove = event.target.parentElement;
+      const remove = event.target.parentElement
       remove.remove()
     }
   }
+
+  // marcar um item como concluido inserir um tachado no texto: em andamento
+  const visivel = document.getElementsByClassName("check")
+  for (let i = 0; i < visivel.length; i++) {
+    visivel[i].onclick = (event) => { 
+      const para = event.target.parentElement;
+      para.style.textDecoration = 'line-through'
+    }
+  }
+
 }
+
+
+
+
