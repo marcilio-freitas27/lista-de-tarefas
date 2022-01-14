@@ -1,9 +1,11 @@
+
+
 //criar novo elemento, seus atributos e inserir na lista de tarefas
 const inserirTarefa = () =>{
   const inserir = document.getElementById('inserir')
   const tarefa =  document.getElementById('tarefa')
   //criar elemento
-  const div = document.createElement('div')
+  const div = document.createElement('li')
   const button = document.createElement('button')
   const input = document.createElement('input')
   const label = document.createElement('label')
@@ -38,17 +40,32 @@ const inserirTarefa = () =>{
   tarefa.value = ''
   div.appendChild(barra)
   inserir.appendChild(div)
+
 }
 
 // marcar um item como concluido inserir um tachado no texto: em andamento
-const visibilidade = () => {
-  const para = document.querySelector('.para')
-  para.style.textDecoration = 'line-through'
+
+// const visibilidade = () =>{
+//   const visivel = document.getElementsByClassName("para");
+//   for (let i = 0; i < close.length; i++) {
+//     visivel[i].onclick = (event) => { 
+//       const para = event.target.parentElement;
+//       para.style.textDecoration = 'line-through'
+//     }
+//   }
+// }
+
+const visibilidade = ()=>{
+  const para = document.getElementsByClassName('para')
+  para[0].style.textDecoration = 'line-through'
 }
 
-// excluir um item da lista: funcional, porém com erro na ordem de exclusão
 const excluir = () =>{
-  const divisao = document.getElementsByClassName('divisao')
-  divisao[0].remove()
-  
+  const close = document.getElementsByClassName("divisao");
+  for (let i = 0; i < close.length; i++) {
+    close[i].onclick = (event) => { 
+      const remove = event.target.parentElement;
+      remove.remove()
+    }
+  }
 }
