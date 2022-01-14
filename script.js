@@ -45,6 +45,7 @@ const inserirTarefa = () => {
     visivel[i].onclick = (event) => { 
       const para = event.target.parentElement;
       para.css('text-decoration','line-through')
+      console.log("teste")
     }
   }
 
