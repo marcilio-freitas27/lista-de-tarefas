@@ -47,7 +47,7 @@ const inserirTarefa = () =>{
     }
   }
 
-  // marcar um item como concluido inserir um tachado no texto: em andamento
+  // marcar um item como concluido e  inserir um tachado no texto: funcional
   const visivel = document.getElementsByClassName("check")
   for (let i = 0; i < visivel.length; i++) {
     visivel[i].onclick = (event) => { 
