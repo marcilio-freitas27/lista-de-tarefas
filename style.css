@@ -31,9 +31,9 @@ ul#inserir{
 }
 
 #painel-header-two{
-  width: 34rem;
-  /* min-width: 60vw;
-  max-width: 60vw; */
+  /* width: 34rem; */
+  min-width: 40vw;
+  max-width: 60vw;
 }
 
 #check{
