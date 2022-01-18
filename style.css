@@ -13,14 +13,16 @@
 }
 
 input#tarefa{
-  min-width:35vw;
-  max-width:60vw;
+  width: 30rem;
+  /* min-width:35vw;
+  max-width:60vw; */
 }
 
 ul#inserir{
   list-style-type: none;
-  min-width: 40vw;
-  max-width: 70vw;
+  width: 34rem;
+  /* min-width: 40vw;
+  max-width: 70vw; */
 }
 
 #painel{
@@ -30,6 +32,8 @@ ul#inserir{
 
 #painel-header-two{
   width: 34rem;
+  /* min-width: 40vw;
+  max-width: 70vw; */
 }
 
 #check{
@@ -48,9 +52,9 @@ ul#inserir{
   height: 32px;
   background: url("https://img.icons8.com/wired/32/000000/delete.png");
   background-repeat: "no-repeat";
-  display: flex;
+  /* display: flex;
   left: 56.5rem;
-  position: sticky;
+  position: sticky; */
 }
 
 .divisao {
@@ -62,4 +66,12 @@ ul#inserir{
   align-items:center;
   font-size: 1.5em;
   font-family: 'Segoe UI';
+}
+
+.para {
+  text-decoration: none;
+}
+
+.paraDois {
+  text-decoration: line-through;
 }
