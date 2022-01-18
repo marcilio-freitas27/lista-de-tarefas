@@ -13,3 +13,7 @@
 ## Pages
 
 - Acesse a aplicação aqui:  [lista-detarefas](https://marcilio-freitas27.github.io/lista-de-tarefas/)
+
+## Docs
+
+[DOM Navigation](https://www.w3schools.com/js/js_htmldom_navigation.asp)

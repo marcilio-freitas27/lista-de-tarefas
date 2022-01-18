@@ -32,7 +32,6 @@ const inserirTarefa = () => {
   for (let i = 0; i < close.length; i++) {
     close[i].onclick = (event) => { 
       const remove = event.target.parentElement
-      console.log(remove.nodeName)
       remove.remove()
     }
   }
@@ -43,8 +42,13 @@ const inserirTarefa = () => {
   for (let i = 0; i < visivel.length; i++) {
     visivel[i].onclick = (event) => {
       const para = event.target.nextSibling
-      console.log(para.nodeName)
-      para.style.textDecoration = 'line-through'
+      if(visivel[i].checked) {
+        para.style.textDecoration = 'line-through'
+      }else{
+        para.style.textDecoration = 'none'
+      }
     }
   }
+
+  
 }
