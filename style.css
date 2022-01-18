@@ -1,5 +1,5 @@
 
-*{
+* {
   margin: 0 auto;
 }
 
@@ -13,9 +13,9 @@
 }
 
 input#tarefa{
-  width: 30rem;
-  /* min-width:35vw;
-  max-width:60vw; */
+  /* width: 100%; */
+  min-width:35vw;
+  max-width:60vw;
 }
 
 ul#inserir{
@@ -32,8 +32,8 @@ ul#inserir{
 
 #painel-header-two{
   width: 34rem;
-  /* min-width: 40vw;
-  max-width: 70vw; */
+  /* min-width: 60vw;
+  max-width: 60vw; */
 }
 
 #check{
@@ -66,12 +66,9 @@ ul#inserir{
   align-items:center;
   font-size: 1.5em;
   font-family: 'Segoe UI';
+  /* width: 100%; */
+  /* min-width:36vw; */
+  /* width:30rem; */
+  /* max-width:60vw; */
 }
 
-.para {
-  text-decoration: none;
-}
-
-.paraDois {
-  text-decoration: line-through;
-}
