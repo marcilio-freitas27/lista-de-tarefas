@@ -42,6 +42,7 @@ const inserirTarefa = () => {
   for (let i = 0; i < visivel.length; i++) {
     visivel[i].onclick = (event) => {
       const para = event.target.nextSibling
+      // se o check box está ativo, linha com tachado. Senão, sem efeito
       if(visivel[i].checked) {
         para.style.textDecoration = 'line-through'
       }else{
