@@ -20,7 +20,8 @@ input#tarefa{
 
 ul#inserir{
   list-style-type: none;
-  width: 34rem;
+  margin:0;
+  padding: 0;
   /* min-width: 40vw;
   max-width: 70vw; */
 }
@@ -37,7 +38,7 @@ ul#inserir{
 }
 
 #check{
-  color: white;
+  color: #fff;
 }
 
 #botao{
@@ -67,8 +68,42 @@ ul#inserir{
   font-size: 1.5em;
   font-family: 'Segoe UI';
   /* width: 100%; */
-  /* min-width:36vw; */
+  /* max-width:36vw; */
   /* width:30rem; */
   /* max-width:60vw; */
+}
+
+/*quando for maior que*/
+@media not screen and (max-width:1075px){
+  .divisao{
+    width:34rem;
+  }
+}
+
+/*quando for menor que*/
+@media only screen and (max-width:1075px){
+  .divisao{
+    width:17rem;
+  }
+}
+
+/*quando for menor que*/
+@media only screen and (max-width:380px){
+  .divisao{
+    width:10rem;
+  }
+}
+
+/*quando for menor que*/
+@media only screen and (max-width:260px){
+  .divisao{
+    width:5rem;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  #painel-header-two{
+    width:17.5rem;
+  }
 }
 
