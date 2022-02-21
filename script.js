@@ -2,6 +2,7 @@
 const inserirTarefa = () => {
   const inserir = $('#inserir')
   const tarefa =  $('#tarefa')
+  const mensagem = $('#mensagem')
   //criar elemento
   // criar atributo e definir seus valores
   const div = $('<li />',{ class: 'divisao' })
@@ -15,16 +16,36 @@ const inserirTarefa = () => {
   })
   const label = $('<label />',{ class: 'para' })
   const barra = $('<br />')
-  // adicionar o elemento filho ao elemento pai
-  div.append(input)
-  div.append(label)
-  // inserir o valor do input no elemento(label)
-  label.html(`${tarefa.val()}`)
-  div.append(button)
-  //inserido o elemento, o input fica sem texto
-  tarefa.val('')
-  div.append(barra)
-  inserir.append(div)
+  if(`${tarefa.val()}` == ''){
+    mensagem.html("Insira algum texto.");
+    mensagem.css(
+      {
+        'color': '#f00',
+        'font-weight':'bold'
+      })
+  }else{
+    mensagem.html(`Tarefa foi adicionada.`);
+    mensagem.css(
+      {
+       'color': '#0f0',
+       'font-weight':'bold'
+      })
+    // tarefa.prop('required', false);
+    // tarefa.setCustomValidity(' ');
+    // adicionar o elemento filho ao elemento pai
+    div.append(input)
+    div.append(label)
+    // inserir o valor do input no elemento(label)
+    label.html(`${tarefa.val()}`)
+    console.log(label.text())
+    div.append(button)
+    //inserido o elemento, o input fica sem texto
+    tarefa.val('')
+    div.append(barra)
+    inserir.append(div)
+  }
+  
+  
 
   //collection = semelhante a uma array, mas só é possível itera-lo. Não da pra usar funções built-in para array
   //quando clica no bottão, o parentNode onde está inserido o botão(a tarefa que foi adicionada) é removido 
@@ -33,6 +54,12 @@ const inserirTarefa = () => {
     close[i].onclick = (event) => { 
       const remove = event.target.parentElement
       remove.remove()
+      mensagem.html(`Tarefa ${label.text()[i]} foi excluída.`);
+      mensagem.css(
+        {
+          'color': '#ff0',
+          'font-weight':'bold'
+        })
     }
   }
 
@@ -50,6 +77,5 @@ const inserirTarefa = () => {
       }
     }
   }
-
   
 }

@@ -72,6 +72,7 @@ ul#inserir{
   /* max-width:60vw; */
 }
 
+
 /*quando for maior que*/
 @media not screen and (max-width:1075px){
   .divisao{
