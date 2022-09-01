@@ -17,14 +17,14 @@ const inserirTarefa = () => {
   const label = $('<label />',{ class: 'para' })
   const barra = $('<br />')
   if(`${tarefa.val()}` == ''){
-    mensagem.html("Insira algum texto.");
+    //mensagem.html("Insira algum texto.");
     mensagem.css(
       {
         'color': '#f00',
         'font-weight':'bold'
       })
   }else{
-    mensagem.html(`Tarefa foi adicionada.`);
+    //mensagem.html(`Tarefa foi adicionada.`);
     mensagem.css(
       {
        'color': '#0f0',
@@ -37,7 +37,7 @@ const inserirTarefa = () => {
     div.append(label)
     // inserir o valor do input no elemento(label)
     label.html(`${tarefa.val()}`)
-    console.log(label.text())
+    //console.log(label.text())
     div.append(button)
     //inserido o elemento, o input fica sem texto
     tarefa.val('')
@@ -54,7 +54,7 @@ const inserirTarefa = () => {
     close[i].onclick = (event) => { 
       const remove = event.target.parentElement
       remove.remove()
-      mensagem.html(`Tarefa ${label.text()[i]} foi excluída.`);
+      //mensagem.html(`Tarefa ${label.text()[i]} foi excluída.`);
       mensagem.css(
         {
           'color': '#ff0',
@@ -76,6 +76,15 @@ const inserirTarefa = () => {
         para.style.textDecoration = 'none'
       }
     }
+  }
+  
+  const toastTrigger = document.getElementById('liveToastBtn')
+  const toastLiveExample = document.getElementById('liveToast')
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+	  const toast = new bootstrap.Toast(toastLiveExample)
+	  toast.show()
+    })
   }
   
 }
