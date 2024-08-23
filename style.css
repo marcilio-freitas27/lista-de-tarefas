@@ -75,6 +75,11 @@ ul#inserir{
   box-shadow: #000000 1px 1px;
 }
 
+input{
+  margin-top: 10px;
+  border-radius: 10px !important;
+}
+
 /*quando for maior que*/
 @media not screen and (max-width:1075px){
   .divisao{
