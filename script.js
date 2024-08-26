@@ -24,27 +24,16 @@ const inserirTarefa = () => {
     });
   } else {
     mensagem.html(`Tarefa foi adicionada.`);
-    // const toastTrigger = document.getElementById("botao");
-    // const toastLiveExample = document.getElementById("liveToast");
-    // if (toastTrigger) {
-    //   toastTrigger.addEventListener("click", () => {
-    //     const toast = new bootstrap.Toast(toastLiveExample);
-    //     toast.show();
-    //   });
-    // }
     mensagem.css({
       color: "#0f0",
       background: "black",
       "font-weight": "bold",
     });
-    // tarefa.prop('required', false);
-    // tarefa.setCustomValidity(' ');
     // adicionar o elemento filho ao elemento pai
     div.append(input);
     div.append(label);
     // inserir o valor do input no elemento(label)
     label.html(`${tarefa.val()}`);
-    //console.log(label.text())
     div.append(button);
     //inserido o elemento, o input fica sem texto
     tarefa.val("");
