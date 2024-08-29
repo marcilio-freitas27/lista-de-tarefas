@@ -7,10 +7,10 @@ const removerTarefa = (mensagem) => {
     close[i].onclick = (event) => {
       const remove = event.target.parentElement;
       remove.remove();
-      mensagem.html(`Tarefa foi excluída.`);
+      mensagem.html(`A tarefa foi excluída.`);
       mensagem.css({
-        color: "#ff0",
-        background: "black",
+        color: "#000",
+        background: "#fff",
         "font-weight": "bold",
       });
     };
@@ -54,15 +54,15 @@ const inserirTarefa = () => {
   if (`${tarefa.val()}` == "") {
     mensagem.html("Insira algum texto, número ou símbolo.");
     mensagem.css({
-      color: "#f00",
-      background: "black",
+      color: "#000",
+      background: "#fff",
       "font-weight": "bold",
     });
   } else {
     mensagem.html(`Tarefa foi adicionada.`);
     mensagem.css({
-      color: "#0f0",
-      background: "black",
+      color: "#000",
+      background: "#fff",
       "font-weight": "bold",
     });
     // adicionar o elemento filho ao elemento pai
