@@ -1,4 +1,23 @@
 
+const inserir = $("#inserir");
+const tarefa = $("#tarefa");
+const mensagem = $("#mensagem");
+const cabecalho = $("#cabecalho");
+
+//criar elemento
+// criar atributo e definir seus valores
+const div = $("<li />", { class: "divisao" });
+const button = $("<button />", {
+  class: "btn btn-light button",
+  type: "button",
+});
+const input = $("<input />", {
+  class: "check",
+  type: "checkbox",
+});
+const label = $("<label />", { class: "para" });
+const barra = $("<br />");
+
 //collection = semelhante a uma array, mas só é possível itera-lo. Não da pra usar funções built-in para array
 //quando clica no bottão, o parentNode onde está inserido o botão(a tarefa que foi adicionada) é removido
 const removerTarefa = (mensagem) => {
@@ -35,22 +54,6 @@ const checarTarefa = () => {
 }
 
 const inserirTarefa = () => {
-  const inserir = $("#inserir");
-  const tarefa = $("#tarefa");
-  const mensagem = $("#mensagem");
-  //criar elemento
-  // criar atributo e definir seus valores
-  const div = $("<li />", { class: "divisao" });
-  const button = $("<button />", {
-    class: "btn btn-light button",
-    type: "button",
-  });
-  const input = $("<input />", {
-    class: "check",
-    type: "checkbox",
-  });
-  const label = $("<label />", { class: "para" });
-  const barra = $("<br />");
   if (`${tarefa.val()}` == "") {
     mensagem.html("Insira algum texto, número ou símbolo.");
     mensagem.css({
@@ -58,6 +61,14 @@ const inserirTarefa = () => {
       background: "#fff",
       "font-weight": "bold",
     });
+    cabecalho.html(`Erro <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>`);
+    cabecalho.removeClass("bg-success").addClass("bg-danger");
+    cabecalho.css({
+      color: "#fff",
+      "font-weight": "bold",
+      display: "flex",
+      "justify-content": "space-between",
+    })
   } else {
     mensagem.html(`Tarefa foi adicionada.`);
     mensagem.css({
@@ -65,7 +76,16 @@ const inserirTarefa = () => {
       background: "#fff",
       "font-weight": "bold",
     });
-    // adicionar o elemento filho ao elemento pai
+    cabecalho.html(`Sucesso <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>`);
+    cabecalho.css({
+      color: "#fff",
+      "font-weight": "bold",
+      display: "flex",
+      "justify-content": "space-between",
+    })
+    cabecalho.removeClass("bg-danger").addClass("bg-success")
+
+    //adicionar o elemento filho ao elemento pai
     div.append(input);
     div.append(label);
     // inserir o valor do input no elemento(label)

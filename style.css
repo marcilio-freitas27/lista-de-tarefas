@@ -39,7 +39,6 @@ ul#inserir{
 }
 
 #botao{
-  /* background-image: url(https://img.icons8.com/wired/32/000000/plus-2-math.png); */
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
@@ -106,6 +105,12 @@ label{
 @media only screen and (max-width:380px){
   .divisao{
     width:10rem;
+  }
+}
+
+@media only screen and (max-width:450px){
+  .toast-container{
+    width: 75% !important;
   }
 }
 
