@@ -1,23 +1,4 @@
 
-const inserir = $("#inserir");
-const tarefa = $("#tarefa");
-const mensagem = $("#mensagem");
-const cabecalho = $("#cabecalho");
-
-//criar elemento
-// criar atributo e definir seus valores
-const div = $("<li />", { class: "divisao" });
-const button = $("<button />", {
-  class: "btn btn-light button",
-  type: "button",
-});
-const input = $("<input />", {
-  class: "check",
-  type: "checkbox",
-});
-const label = $("<label />", { class: "para" });
-const barra = $("<br />");
-
 //collection = semelhante a uma array, mas só é possível itera-lo. Não da pra usar funções built-in para array
 //quando clica no bottão, o parentNode onde está inserido o botão(a tarefa que foi adicionada) é removido
 const removerTarefa = (mensagem) => {
@@ -54,6 +35,26 @@ const checarTarefa = () => {
 }
 
 const inserirTarefa = () => {
+
+  const inserir = $("#inserir");
+  const tarefa = $("#tarefa");
+  const mensagem = $("#mensagem");
+  const cabecalho = $("#cabecalho");
+
+  //criar elemento
+  // criar atributo e definir seus valores
+  const div = $("<li />", { class: "divisao" });
+  const button = $("<button />", {
+    class: "btn btn-light button",
+    type: "button",
+  });
+  const input = $("<input />", {
+    class: "check",
+    type: "checkbox",
+  });
+  const label = $("<label />", { class: "para" });
+  const barra = $("<br />");
+  
   if (`${tarefa.val()}` == "") {
     mensagem.html("Insira algum texto, número ou símbolo.");
     mensagem.css({
